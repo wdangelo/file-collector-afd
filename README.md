@@ -7,4 +7,16 @@
 
 - Acessa servidor FTP e envia o arquivo 'name'
 
+##
 
+# Issues 
+
+[ ] Direcionar os arquivos para uma pasta especifica
+
+[ ] Juntar os arquivos
+
+[ ] Acessar FTP e enviar arquivo criado 
+
+[ ] Enviar e-mail com logs "Success" ou "Error"
+
+[ ] Automatizar no sistema operacional

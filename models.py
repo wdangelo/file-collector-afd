@@ -1,7 +1,7 @@
 import peewee
 
-# Criamos o banco de dados
-db = peewee.SqliteDatabase('codigo_avulso.db')
+
+db = peewee.SqliteDatabase('database.db')
 
 
 class BaseModel(peewee.Model):
@@ -17,8 +17,7 @@ class Url(BaseModel):
     pa = peewee.CharField(unique=True)
     ip = peewee.CharField(unique=True)
     
-    
-        
+         
         
 if __name__ == '__main__':
     try:
