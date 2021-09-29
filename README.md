@@ -11,6 +11,8 @@
 
 # Issues 
 
+[ x ] Criar espaço de 10 dias na data de coleta dos arquivos
+
 [ ] Direcionar os arquivos para uma pasta especifica
 
 [ ] Juntar os arquivos

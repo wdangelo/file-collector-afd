@@ -2,6 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from listUrl import list
+
+from utils.rangedate import tenDaysago
+
+date = tenDaysago.handle()
+print(date)
+
 urls = list()
 def execute():
     for url in urls:
@@ -36,7 +42,7 @@ def execute():
         
         date_initial_afd = browser.find_element_by_xpath('//*[@id="initial_date"]')
         date_initial_afd.clear()
-        date_initial_afd.send_keys("11092021")
+        date_initial_afd.send_keys(date)
         sleep(2)
         date_initial_afd.send_keys(Keys.ENTER)
         sleep(10)
