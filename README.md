@@ -13,12 +13,16 @@
 
 [ x ] Criar espaço de 10 dias na data de coleta dos arquivos
 
-[ ] Direcionar os arquivos para uma pasta especifica
+[ x ] Direcionar os arquivos para uma pasta especifica
 
-[ ] Juntar os arquivos
+[ x ] Juntar os arquivos
+
+[  ] Deletar arquivos ja baixados antes de iniciar o doenload de novos arquivos
 
 [ ] Acessar FTP e enviar arquivo criado 
 
 [ ] Enviar e-mail com logs "Success" ou "Error"
 
-[ ] Automatizar no sistema operacional
+[ x ] Automatizar no sistema operacional
+
+[ ] Criar interface para cadastro de Relógios

@@ -6,12 +6,11 @@ from listUrl import list
 from utils.rangedate import tenDaysago
 
 date = tenDaysago.handle()
-print(date)
+
 
 urls = list()
 def execute():
     for url in urls:
-        
         browser = webdriver.Chrome()
         browser.maximize_window()
         browser.get(url.ip)
@@ -46,6 +45,8 @@ def execute():
         sleep(2)
         date_initial_afd.send_keys(Keys.ENTER)
         sleep(10)
+        browser.close()
+    print("Coleta de arquivos finalizada")
 
 if __name__ == '__main__':
     execute()

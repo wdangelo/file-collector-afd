@@ -1,16 +1,41 @@
-from createUrl import handle
+import time
+import schedule
+from fileCollectorBrowser import execute
 
-exitCreateUrl = True
+from utils.moveFileDownload.moveFileDownloadAfd import moveFileDownloadAfdFromToFileUnifier_files
+from utils.deleteFileAfd.delete import deleteFilesForPathFiles
+from utils.fileUnifier.fileUnifierAdf import unifier
 
-while exitCreateUrl == True:
+
+def deleteFiles():
+    deleteFilesForPathFiles()
     
-    pa = input("Nome do PA: ")
-    ip = input("Endereço 'url' do relógio: ")
-    handle(pa, ip)
-    exitCreate = input("Continuar cadastrando s/n? : ")
     
-    if exitCreate != 's' and exitCreate != 'S' and exitCreate != 'sim' and exitCreate != 'SIM' :
-        exitCreateUrl = False
+
+def downloadFilesAFd():
+    execute()
+    
+    
+def moveFilesAfd():
+    moveFileDownloadAfdFromToFileUnifier_files()
+    
+
+def fileUnifier():
+    unifier()
+    
+    
+schedule.every().day.at("13:00").do(deleteFiles)
+schedule.every().day.at("13:01").do(downloadFilesAFd)
+schedule.every().day.at("13:06").do(moveFilesAfd)
+schedule.every().day.at("13:11").do(fileUnifier)
+
+
+
+while 1:
+    
+    schedule.run_pending()
+    time.sleep(5)
+    
 
 
 
