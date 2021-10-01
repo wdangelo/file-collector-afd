@@ -17,11 +17,11 @@
 
 [ x ] Juntar os arquivos
 
-[  ] Deletar arquivos ja baixados antes de iniciar o doenload de novos arquivos
+[ x ] Deletar arquivos ja baixados antes de iniciar o doenload de novos arquivos
 
-[ ] Acessar FTP e enviar arquivo criado 
+[ x ] Acessar FTP e enviar arquivo criado 
 
-[ ] Enviar e-mail com logs "Success" ou "Error"
+[ ] Enviar e-mail com logs "Success" ou "Error" dos passos do bot
 
 [ x ] Automatizar no sistema operacional
 
