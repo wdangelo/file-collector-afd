@@ -1,6 +1,7 @@
 
 import pysftp as sftp
 from ftplib import FTP
+from utils.emailConfig.email_config import sending
 
 
 remotepath = '/'
@@ -24,9 +25,10 @@ def sftpUpload():
         
         s.close()
         print('Upload do arquivo afd efetuado!')
+        sending(message='Arquivos enviados com sucesso!')
     except Exception as err:
         print('Error: ', err)
-        
+        sending(message=f'Erro ao importar arquivo AFD via FTP: {err}')
 
 sftpUpload()
 

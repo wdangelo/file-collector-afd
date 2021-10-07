@@ -7,6 +7,7 @@ from utils.deleteFileAfd.delete import deleteFilesForPathFiles
 from utils.fileUnifier.fileUnifierAdf import unifier
 from utils.ftpUploadAfd.ftp_upload import sftpUpload
 
+
 print("---- Coleta de Arquivos do Sistema de Ponto ATIVO ----")
 
 def deleteFiles():
