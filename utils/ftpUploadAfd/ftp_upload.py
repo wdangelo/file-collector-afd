@@ -29,8 +29,11 @@ def sftpUpload():
     except Exception as err:
         print('Error: ', err)
         sending(message=f'Erro ao importar arquivo AFD via FTP: {err}')
+        
+        
+if __name__ == '__main__':
 
-sftpUpload()
+    sftpUpload()
 
 
 

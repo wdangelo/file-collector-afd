@@ -21,7 +21,9 @@
 
 [ x ] Acessar FTP e enviar arquivo criado 
 
-[ ] Enviar e-mail com logs "Success" ou "Error" dos passos do bot
+[ x ] Enviar e-mail com logs "Success" ou "Error" dos passos do bot
+
+[ ] Criar arquivo de logs dos erros e succes
 
 [ x ] Automatizar no sistema operacional
 
