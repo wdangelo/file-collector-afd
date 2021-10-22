@@ -55,7 +55,7 @@ def execute():
             browser.close()
             
         else:
-            pass
+            continue
             
         print("Coleta de arquivos finalizada")
         
