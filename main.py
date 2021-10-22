@@ -32,11 +32,11 @@ def uploadSftpAfd():
 
 
     
-schedule.every().day.at("20:30").do(deleteFiles)
-schedule.every().day.at("20:32").do(downloadFilesAFd)
-schedule.every().day.at("20:40").do(moveFilesAfd)
-schedule.every().day.at("20:42").do(fileUnifier)
-schedule.every().day.at("20:45").do(uploadSftpAfd)
+schedule.every().day.at("09:50").do(deleteFiles)
+schedule.every().day.at("09:53").do(downloadFilesAFd)
+schedule.every().day.at("10:10").do(moveFilesAfd)
+schedule.every().day.at("10:15").do(fileUnifier)
+schedule.every().day.at("10:20").do(uploadSftpAfd)
 
 
 while 1:

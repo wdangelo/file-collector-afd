@@ -10,4 +10,4 @@ def list():
 if __name__ == '__main__':
     url = list()
     for items in url:
-        print(items.ip)
+        print(items.url)

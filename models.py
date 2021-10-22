@@ -16,6 +16,7 @@ class Url(BaseModel):
 
     pa = peewee.CharField(unique=True)
     ip = peewee.CharField(unique=True)
+    url = peewee.CharField(unique=True)
     
          
         
