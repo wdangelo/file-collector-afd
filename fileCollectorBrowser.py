@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from listUrl import list
+from utils.logs.app import errorLogsIp
 
 from utils.rangedate import tenDaysago
 
@@ -55,6 +56,11 @@ def execute():
             browser.close()
             
         else:
+            if response != 0:
+                error=f"it was not possible to access the ip: {url.ip}"
+                
+                errorLogsIp(error, ip=url.ip)
+                print(type(url.ip))
             continue
             
         print("Coleta de arquivos finalizada")

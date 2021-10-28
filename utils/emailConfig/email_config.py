@@ -16,7 +16,7 @@ def sending(message):
     # email remetente, senha, destinatário
     email_from = 'roborh504200@gmail.com'
     email_password = 'wlu@2341'
-    email_to = 'william.angelo@sicoob.com.br'
+    email_to = 'rh.rioclaro@sicoob.com.br'
     #email_to2 = 'informatica.5042@sicoob.com.br'
     
     # Setup the MIME

@@ -23,7 +23,15 @@
 
 [ x ] Enviar e-mail com logs "Success" ou "Error" dos passos do bot
 
-[ ] Criar arquivo de logs dos erros e succes
+[ x  ] Criar arquivo de logs dos erros e succes
+
+        [ x ] Criar log ao tentar acessar o ip do relógio ponto
+        [ ] Criar log ao tentar executar uma tarefa no arquivo main.py
+        [ ] Criar log ao tentar deletar os arquivos da pasta files
+        [ ] Criar log ao tentar enviar e-mail
+        [ ] Criar log ao tenar unificar os Arquivos
+        [ ] Criar log ao tentar enviar o arquivo AFD para o SFTP 
+
 
 [ x ] Automatizar no sistema operacional
 
