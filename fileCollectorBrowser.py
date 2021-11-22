@@ -1,11 +1,15 @@
 import os
+from config import controll_id
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+#from selenium.webdriver.chrome.options import Options
 from time import sleep
 from listUrl import list
 from utils.logs.app import errorLogsIp
 
 from utils.rangedate import tenDaysago
+
+
 
 date = tenDaysago.handle()
 
@@ -19,6 +23,8 @@ def execute():
         response = os.system("ping -c 1 " + url.ip)
         
         if response == 0:
+            #chrome_options = Options()
+            #chrome_options.add_argument("--headless")
             browser = webdriver.Chrome()
             browser.maximize_window()
             browser.get(url.url)
@@ -33,8 +39,8 @@ def execute():
             elem_user_pass = browser.find_element_by_name("password")
             elem_user_name.clear()
             elem_user_pass.clear()
-            elem_user_name.send_keys("admin")
-            elem_user_pass.send_keys("admin")
+            elem_user_name.send_keys(controll_id["user"])
+            elem_user_pass.send_keys(controll_id["password"])
             sleep(2)
             elem_user_name.send_keys(Keys.ENTER)
             sleep(5)
