@@ -35,6 +35,8 @@
 
 [ x ] Automatizar no sistema operacional
 
-[ ] Criar interface para cadastro de Relógios
+[ x ] Criar interface para cadastro de Relógios
 
 [ x ] Fazer teste de ip disponivel caso nao esteja passar para o proximo endereço
+
+[  ] Criar ambiente docker para rodar em produção no serviror

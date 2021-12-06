@@ -1,5 +1,7 @@
 {
     "python.analysis.extraPaths": [
-        "./database"
+        "./database",
+        "./config",
+        "./src"
     ]
 }

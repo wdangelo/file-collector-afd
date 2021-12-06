@@ -1,10 +1,9 @@
 import os
-from config import controll_id
-from selenium.webdriver import Chrome, Remote
+#from config import controll_id
+from selenium.webdriver import Remote
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from listUrl import list
-from utils.emailConfig.email_config import sending
 from utils.logs.app import errorLogsIp
 
 from utils.rangedate import tenDaysago
@@ -19,8 +18,8 @@ def execute():
         response = os.system("ping -c 1 " + url.ip)
         
         if response == 0:
-            browser = Chrome()
-            #browser = Remote(desired_capabilities={'browserName': 'chrome'})
+            browser = Remote(desired_capabilities={'browserName': 'firefox'})
+            browser
             browser.maximize_window()
             browser.get(url.url)
             button_browser_secury = browser.find_element_by_xpath('//*[@id="details-button"]')
@@ -34,8 +33,8 @@ def execute():
             elem_user_pass = browser.find_element_by_name("password")
             elem_user_name.clear()
             elem_user_pass.clear()
-            elem_user_name.send_keys(controll_id["user"])
-            elem_user_pass.send_keys(controll_id["password"])
+            elem_user_name.send_keys("admin")
+            elem_user_pass.send_keys("admin")
             sleep(2)
             elem_user_name.send_keys(Keys.ENTER)
             sleep(5)
@@ -57,14 +56,12 @@ def execute():
             browser.close()
             
         else:
-
-            error=f"Relógio ponto ip: {url.ip} PA: {url.pa}"
-            
-            errorLogsIp(error, ip=url.ip)
-            print(type(url.ip))
-            sending(error)
-        
-        continue
+            if response != 0:
+                error=f"it was not possible to access the ip: {url.ip}"
+                
+                errorLogsIp(error, ip=url.ip)
+                print(type(url.ip))
+            continue
             
         print("Coleta de arquivos finalizada")
         
