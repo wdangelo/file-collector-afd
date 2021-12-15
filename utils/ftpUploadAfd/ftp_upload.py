@@ -1,8 +1,18 @@
 
 import pysftp as sftp
 from ftplib import FTP
+import os
+from dotenv import load_dotenv
 #from utils.emailConfig.email_config import sending
-from config import sisbr
+load_dotenv()
+
+sisbr = {
+    "user": os.getenv('USER_SISBR'),
+    "password": os.getenv('PASS_SISBR'),
+    "domain": os.getenv('DOMAIN_SISBR'),
+    "host": os.getenv('HOST_SISBR')
+    
+}
 
 domain=sisbr["domain"]
 user=sisbr["user"]
