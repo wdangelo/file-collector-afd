@@ -2,9 +2,12 @@
 import pysftp as sftp
 from ftplib import FTP
 #from utils.emailConfig.email_config import sending
+from config import sisbr
 
-domain="sicoob"
-user="roborh5042_00"
+domain=sisbr["domain"]
+user=sisbr["user"]
+password=sisbr["password"]
+host=sisbr["host"]
 
 
 remotepath = '/'
@@ -16,9 +19,9 @@ def sftpUpload():
         cnopts = sftp.CnOpts(knownhosts='known_hosts')
         cnopts.hostkeys = None
         s = sftp.Connection(
-            host='172.16.0.150',
+            host=host,
             username=f"{domain}\{user}",
-            password='@sicoob5042',
+            password=password,
             port=22,
             private_key='.ppk',
             cnopts=cnopts
@@ -30,7 +33,7 @@ def sftpUpload():
         print('Upload do arquivo afd efetuado!')
         #sending(message='Arquivos enviados com sucesso!')
     except Exception as err:
-        print('Error: ', err)
+        print('Erro ao enviar para destino FTP Error: ', err)
         #sending(message=f'Erro ao importar arquivo AFD via FTP: {err}')
         
         

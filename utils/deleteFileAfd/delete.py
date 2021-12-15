@@ -1,5 +1,5 @@
 import os, shutil
-from utils.emailConfig.email_config import sending
+#from utils.emailConfig.email_config import sending
 
 def deleteFilesForPathFiles():
     
@@ -16,7 +16,7 @@ def deleteFilesForPathFiles():
             #Elif os.path.isdir(file_path): shutil.rmtree(file_path)
         except Exception as e:
             print(e)
-            sending(message=f'Falha ao Limpar a pasta "files": {e}')
+            #sending(message=f'Falha ao Limpar a pasta "files": {e}')
 
 
 if __name__ == '__main__':

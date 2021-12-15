@@ -34,22 +34,22 @@ def uploadSftpAfd():
 
 
 try:  
-    schedule.every().day.at("20:00").do(deleteFiles)
-    schedule.every().day.at("20:10").do(downloadFilesAFd)
-    schedule.every().day.at("20:20").do(moveFilesAfd)
-    schedule.every().day.at("20:30").do(fileUnifier)
-    schedule.every().day.at("20:35").do(uploadSftpAfd)
+    schedule.every().day.at("18:04").do(deleteFiles)
+    schedule.every().day.at("18:10").do(downloadFilesAFd)
+    schedule.every().day.at("18:25").do(moveFilesAfd)
+    schedule.every().day.at("18:35").do(fileUnifier)
+    schedule.every().day.at("18:45").do(uploadSftpAfd)
     
 except Exception as err:
     sending(message=f'Erro ao importar arquivo AFD via FTP: {err}')
     errorLogs(err, task=schedule)
-    print("Erro")
+    print("Erro", err)
 
 
 while 1:
-    
+    print('agenda')
     schedule.run_pending()
-    time.sleep(5)
+    time.sleep(10)
     
 
 

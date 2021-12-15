@@ -8,7 +8,7 @@ def handle():
     rangetendays = relativedelta(days=10)
     anterior = today - rangetendays
 
-    datetendaysago = anterior.strftime('%d/%m/%Y')
+    datetendaysago = anterior.strftime(f'%d/%m/%Y')
 
     return datetendaysago
 

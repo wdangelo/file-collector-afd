@@ -7,3 +7,11 @@ controll_id = {
     "password": os.getenv('PASS_CONTROLL_ID')
 }
 
+sisbr = {
+    "user": os.getenv('USER_SISBR'),
+    "password": os.getenv('PASS_SISBR'),
+    "domain": os.getenv('DOMAIN_SISBR'),
+    "host": os.get('HOST_SISBR')
+    
+}
+

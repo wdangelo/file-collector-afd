@@ -16,6 +16,7 @@ def unifier():
     def create_text_file(file_path):
 
         with open('5042.txt', 'a') as f:
+            print(file_path)
             f.write(str(read_text_file(file_path)) + "\n")
 
 
@@ -24,7 +25,7 @@ def unifier():
         if file.endswith(".txt"):
             file_path = f"{path}/{file}"
             create_text_file(file_path)
-
+            
 
 if __name__ == '__main__':
     unifier()
