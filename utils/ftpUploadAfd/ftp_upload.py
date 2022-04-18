@@ -20,7 +20,7 @@ password=sisbr["password"]
 host=sisbr["host"]
 
 
-remotepath = '/'
+remotepath = '/opt/ponto/5042'
 localpath = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt'
 
 
@@ -33,11 +33,12 @@ def sftpUpload():
             username=f"{domain}\{user}",
             password=password,
             port=22,
-            private_key='.ppk',
+            private_key='/opt/ponto/5042',
             cnopts=cnopts
             )
         
         s.put(localpath)
+        
         
         s.close()
         print('Upload do arquivo afd efetuado!')

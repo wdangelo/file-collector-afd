@@ -31,14 +31,21 @@ def fileUnifier():
 
 def uploadSftpAfd():
     sftpUpload()
+    
+
+def sendMailFile():
+    sending(message=f'Segue anexo arquivo AFD contendo todos os PAs')
 
 
 try:  
-    schedule.every().day.at("18:04").do(deleteFiles)
-    schedule.every().day.at("18:10").do(downloadFilesAFd)
-    schedule.every().day.at("18:25").do(moveFilesAfd)
-    schedule.every().day.at("18:35").do(fileUnifier)
-    schedule.every().day.at("18:45").do(uploadSftpAfd)
+    schedule.every().day.at("19:00").do(deleteFiles)
+    schedule.every().day.at("19:05").do(downloadFilesAFd)
+    schedule.every().day.at("19:25").do(moveFilesAfd)
+    schedule.every().day.at("19:30").do(fileUnifier)
+    schedule.every().day.at("19:35").do(sendMailFile)
+    schedule.every().day.at("19:40").do(uploadSftpAfd)
+    
+    
     
 except Exception as err:
     sending(message=f'Erro ao importar arquivo AFD via FTP: {err}')
@@ -47,7 +54,6 @@ except Exception as err:
 
 
 while 1:
-    print('agenda')
     schedule.run_pending()
     time.sleep(10)
     

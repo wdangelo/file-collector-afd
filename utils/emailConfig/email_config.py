@@ -1,6 +1,8 @@
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 from datetime import datetime
 
 def sending(message):
@@ -14,8 +16,8 @@ def sending(message):
                       '''
 
     # email remetente, senha, destinatário
-    email_from = 'roborh504200@gmail.com'
-    email_password = 'wlu@2341'
+    email_from = 'wdangelo1983@gmail.com'
+    email_password = '@sicoob05'
     email_to = 'rh.rioclaro@sicoob.com.br'
     #email_to2 = 'informatica.5042@sicoob.com.br'
     
@@ -29,8 +31,20 @@ def sending(message):
         # Corpo do E-mail com anexos
     message.attach(MIMEText(text_mail_body, 'plain'))
     
+    path_file = f"/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt"
+    attchment = open(path_file, 'rb')
+    
+    att = MIMEBase('application', 'octet-stream')
+    att.set_payload(attchment.read())
+    encoders.encode_base64(att)
+    att.add_header('Content-Disposition', f'attachment; filename=5042.txt')
+    attchment.close()
+    
+    message.attach(att)
+    
         # Create SMTP session for sending the mail
     session = smtplib.SMTP('smtp.gmail.com', 587)  # Usuário do Gmail com porta
+    session.ehlo()
     session.starttls()  # Habilita a segurança
     session.login(email_from, email_password)  # Login e senha de quem envia o e-mail
     text = message.as_string()

@@ -19,7 +19,7 @@ def execute():
         response = os.system("ping -c 1 " + url.ip)
         
         if response == 0:
-            browser = Chrome()
+            browser = Chrome(executable_path=f"/home/administrador/www/file-collector-afd/chromedriver")
             #browser = Remote(desired_capabilities={'browserName': 'chrome'})
             browser.maximize_window()
             browser.get(url.url)
@@ -62,7 +62,7 @@ def execute():
             
             errorLogsIp(error, ip=url.ip)
             print(type(url.ip))
-            sending(error)
+            #sending(error)
         
         continue
             
