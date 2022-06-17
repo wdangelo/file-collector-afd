@@ -1,4 +1,3 @@
-
 import pysftp as sftp
 from ftplib import FTP
 import os
@@ -21,7 +20,8 @@ host=sisbr["host"]
 
 
 remotepath = '/opt/ponto/5042'
-localpath = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt'
+localpath = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "5042.txt")
+#'/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt'
 
 
 def sftpUpload():
@@ -33,7 +33,7 @@ def sftpUpload():
             username=f"{domain}\{user}",
             password=password,
             port=22,
-            private_key='/opt/ponto/5042',
+            private_key='/opt/ponto/5042/upload/',
             cnopts=cnopts
             )
         

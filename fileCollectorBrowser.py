@@ -13,13 +13,16 @@ date = tenDaysago.handle()
 
 urls = list()
 
+
 def execute():
+
+    
     for url in urls:
         
         response = os.system("ping -c 1 " + url.ip)
         
         if response == 0:
-            browser = Chrome(executable_path=f"/home/administrador/www/file-collector-afd/chromedriver")
+            browser = Chrome(executable_path=f"chromedriver")
             #browser = Remote(desired_capabilities={'browserName': 'chrome'})
             browser.maximize_window()
             browser.get(url.url)

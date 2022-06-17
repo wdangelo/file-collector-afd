@@ -5,7 +5,7 @@ def deleteFilesForPathFiles():
     
 
     
-    folder = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files'
+    folder = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "")
     
     for the_file in os.listdir(folder):
         file_path = os.path.join(folder, the_file)

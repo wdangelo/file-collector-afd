@@ -1,6 +1,7 @@
 import os
 import codecs
-path = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files'
+path = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "")
+print(path)
 
 def unifier():
         
@@ -22,7 +23,7 @@ def unifier():
     for file in os.listdir():
 
         if file.endswith(".txt"):
-            file_path = f"{path}/{file}"
+            file_path = f"{path}{file}"
             create_text_file(file_path)
             
 

@@ -38,12 +38,12 @@ def sendMailFile():
 
 
 try:  
-    schedule.every().day.at("19:00").do(deleteFiles)
-    schedule.every().day.at("19:05").do(downloadFilesAFd)
-    schedule.every().day.at("19:25").do(moveFilesAfd)
-    schedule.every().day.at("19:30").do(fileUnifier)
-    schedule.every().day.at("19:35").do(sendMailFile)
-    schedule.every().day.at("19:40").do(uploadSftpAfd)
+    schedule.every().day.at("08:10").do(deleteFiles)
+    schedule.every().day.at("08:15").do(downloadFilesAFd)
+    schedule.every().day.at("08:40").do(moveFilesAfd)
+    schedule.every().day.at("08:42").do(fileUnifier)
+    schedule.every().day.at("08:45").do(uploadSftpAfd)
+    schedule.every().day.at("08:50").do(sendMailFile)
     
     
     
