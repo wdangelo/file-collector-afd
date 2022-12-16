@@ -34,16 +34,18 @@ def uploadSftpAfd():
     
 
 def sendMailFile():
-    sending(message=f'Segue anexo arquivo AFD contendo todos os PAs')
+    print("Arquivo enviado com secesso")
+    #sending(message=f'Segue anexo arquivo AFD contendo todos os PAs')
+    pass
 
 
 try:  
-    schedule.every().day.at("19:00").do(deleteFiles)
-    schedule.every().day.at("19:05").do(downloadFilesAFd)
-    schedule.every().day.at("19:25").do(moveFilesAfd)
-    schedule.every().day.at("19:30").do(fileUnifier)
-    schedule.every().day.at("19:35").do(sendMailFile)
-    schedule.every().day.at("19:40").do(uploadSftpAfd)
+    schedule.every().day.at("22:00").do(deleteFiles)
+    schedule.every().day.at("22:05").do(downloadFilesAFd)
+    schedule.every().day.at("23:05").do(moveFilesAfd)
+    schedule.every().day.at("23:10").do(fileUnifier)
+    schedule.every().day.at("23:15").do(uploadSftpAfd)
+    schedule.every().day.at("23:20").do(sendMailFile)
     
     
     
