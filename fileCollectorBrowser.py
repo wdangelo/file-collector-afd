@@ -22,7 +22,7 @@ def execute():
         response = os.system("ping -c 1 " + url.ip)
         
         if response == 0:
-            browser = Chrome(executable_path=f"chromedriver")
+            browser = Chrome(executable_path=f"./chromedriver")
             #browser = Remote(desired_capabilities={'browserName': 'chrome'})
             browser.maximize_window()
             browser.get(url.url)

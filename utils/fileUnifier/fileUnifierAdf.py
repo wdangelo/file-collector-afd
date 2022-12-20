@@ -2,7 +2,7 @@ import os
 import codecs
 
 import pandas as pd
-path = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files'
+path = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files/'
 
 
 def unifier():

@@ -1,4 +1,3 @@
-import os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -19,7 +18,7 @@ def sending(message):
     # email remetente, senha, destinatário
     email_from = 'wdangelo1983@gmail.com'
     email_password = '@sicoob05'
-    email_to = 'rh.rioclaro@sicoob.com.br'
+    email_to = 'william.angelo@sicoob.com.br'
     #email_to2 = 'informatica.5042@sicoob.com.br'
     
     # Setup the MIME
@@ -32,7 +31,8 @@ def sending(message):
         # Corpo do E-mail com anexos
     message.attach(MIMEText(text_mail_body, 'plain'))
     
-    path_file = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "5042.txt")
+    #path_file = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "5042.txt")
+    path_file = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt'
     attchment = open(path_file, 'rb')
     
     att = MIMEBase('application', 'octet-stream')

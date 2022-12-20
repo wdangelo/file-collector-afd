@@ -20,8 +20,8 @@ host=sisbr["host"]
 
 
 remotepath = '/opt/ponto/5042'
-localpath = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "5042.txt")
-#'/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt'
+#localpath = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "5042.txt")
+localpath ='/home/administrador/www/file-collector-afd/utils/fileUnifier/files/5042.txt'
 
 
 def sftpUpload():

@@ -2,10 +2,12 @@ import os
 
 #"/home/administrador/www/file-collector-afd/utils/fileUnifier/files/"
 #C:\bots\file-collector-afd\utils\fileUnifier\files>
-downloads = os.path.join("c:\\", "Users", "williama2009_00", "Downloads")
+#downloads = os.path.join("c:\\", "Users", "williama2009_00", "Downloads")
+downloads = '/home/administrador/Downloads'
 
 def moveFileDownloadAfdFromToFileUnifier_files():
-    path = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "")
+    #path = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "")
+    path = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files/'
     
     try:
         

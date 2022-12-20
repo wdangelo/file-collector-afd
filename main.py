@@ -41,11 +41,11 @@ def sendMailFile():
 
 try:  
     schedule.every().day.at("22:00").do(deleteFiles)
-    schedule.every().day.at("22:05").do(downloadFilesAFd)
-    schedule.every().day.at("23:05").do(moveFilesAfd)
-    schedule.every().day.at("23:10").do(fileUnifier)
-    schedule.every().day.at("23:15").do(uploadSftpAfd)
-    schedule.every().day.at("23:20").do(sendMailFile)
+    schedule.every().day.at("22:02").do(downloadFilesAFd)
+    schedule.every().day.at("22:50").do(moveFilesAfd)
+    schedule.every().day.at("22:52").do(fileUnifier)
+    schedule.every().day.at("22:55").do(uploadSftpAfd)
+    schedule.every().day.at("22:59").do(sendMailFile)
 
     
 except Exception as err:
