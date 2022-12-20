@@ -1,14 +1,18 @@
 import os
 
+#"/home/administrador/www/file-collector-afd/utils/fileUnifier/files/"
+#C:\bots\file-collector-afd\utils\fileUnifier\files>
+downloads = os.path.join("c:\\", "Users", "williama2009_00", "Downloads")
 
 def moveFileDownloadAfdFromToFileUnifier_files():
+    path = os.path.join("c:\\", "bots", "file-collector-afd", "utils", "fileUnifier", "files", "")
     
     try:
-    
-        os.chdir('/home/administrador/Downloads/')
+        
+        os.chdir(downloads)
         #lista os arquivos da pasta Downloads
         for file in os.listdir():
-            os.rename(file, "/home/administrador/www/file-collector-afd/utils/fileUnifier/files/" + file)
+            os.rename(file, path + file)
         
         print(f'Arquivos os arquvios foram movidos com sucesso')
         

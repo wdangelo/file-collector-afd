@@ -32,4 +32,8 @@ schedule==1.1.0
 selenium==3.141.0
 six==1.16.0
 tagui==1.45.0
+<<<<<<< HEAD
 urllib3==1.26.7
+=======
+urllib3==1.26.7
+>>>>>>> fad7c3e4f825f7e22698d84fd051e78c5417c168

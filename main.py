@@ -46,8 +46,7 @@ try:
     schedule.every().day.at("23:10").do(fileUnifier)
     schedule.every().day.at("23:15").do(uploadSftpAfd)
     schedule.every().day.at("23:20").do(sendMailFile)
-    
-    
+
     
 except Exception as err:
     sending(message=f'Erro ao importar arquivo AFD via FTP: {err}')

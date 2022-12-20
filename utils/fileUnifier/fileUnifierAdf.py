@@ -1,7 +1,9 @@
 import os
 import codecs
+
 import pandas as pd
 path = '/home/administrador/www/file-collector-afd/utils/fileUnifier/files'
+
 
 def unifier():
         
@@ -24,7 +26,7 @@ def unifier():
     for file in os.listdir():
 
         if file.endswith(".txt"):
-            file_path = f"{path}/{file}"
+            file_path = f"{path}{file}"
             create_text_file(file_path)
             
             
