@@ -16,10 +16,10 @@ def sending(message):
                       '''
 
     # email remetente, senha, destinatário
-    email_from = 'wdangelo1983@gmail.com'
-    email_password = '@sicoob05'
-    email_to = 'william.angelo@sicoob.com.br'
-    #email_to2 = 'informatica.5042@sicoob.com.br'
+    email_from = 'xxx@xxxx.xxxx'
+    email_password = 'xxxxxxxxxx'
+    email_to = 'xxxxxx@xxxxx.xxx.xx'
+    #email_to2 = 'xxxxxx@xxxxx.xxx.xx'
     
     # Setup the MIME
     message = MIMEMultipart()
